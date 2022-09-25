@@ -13,7 +13,7 @@ def get_dirs(path: str) -> list:
 
 def create_path_name(pri_path: str, yr: list, sec_path: str) -> list:
     """
-    Create a list of file paths by joining local directories with year.
+    Combine the file name and year using directory name and year.
     param yr: A list of years
     param pri_path: Local parent path
     param sec_path: Secondary parent path
@@ -30,10 +30,10 @@ def create_path_name(pri_path: str, yr: list, sec_path: str) -> list:
 def create_dirs(mons: list, p_path: str, yr: list, s_path: str) -> None:
     """
     Create the folders in the remote directory.
-    param mons: A list of month
-    param yr: A list of years
-    param p_path: Local parent path
-    param s_path: Secondary parent path
+    param mons: A list containig months
+    param yr: A list containing years
+    param p_path: Local path
+    param s_path: Secondary path
     """
     # TODO: handle where only one month is given
     paths = create_path_name(pri_path=p_path, yr=yr, sec_path=s_path)
