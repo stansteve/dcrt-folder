@@ -4,8 +4,8 @@ from pathlib import Path
 
 def get_dirs(p: str) -> list:
     """
-    Gen the names of folders inside the directory
-    param p: local directory path
+    Extract names of all folders inside the local directory
+    param p: path to loacal directory
     return: A list containing names
     """
     return [name for name in os.listdir(p) if os.path.isdir(os.path.join(p, name))]
