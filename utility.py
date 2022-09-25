@@ -2,13 +2,13 @@ import os
 from pathlib import Path
 
 
-def get_dirs(p: str) -> list:
+def get_dirs(path: str) -> list:
     """
     Extract names of all folders inside the local directory
     param p: path to loacal directory
     return: A list containing names
     """
-    return [name for name in os.listdir(p) if os.path.isdir(os.path.join(p, name))]
+    return [name for name in os.listdir(path) if os.path.isdir(os.path.join(path, name))]
 
 
 def create_path_name(pri_path: str, yr: list, sec_path: str) -> list:
