@@ -2,6 +2,12 @@ import os
 from pathlib import Path
 
 
+local_path = "/home/fiend/Downloads/Work/DCRT/INPUT/TEMPLATE 3"
+secondary_path = "/home/fiend/Downloads/Work/DCRT/INPUT/TEMPLATE 4"
+years = ['2022', '2023']
+months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+
+
 def get_dirs(path: str) -> list:
     """
     Extract names of all folders inside the local directory
@@ -45,11 +51,6 @@ def create_dirs(mons: list, p_path: str, yr: list, s_path: str) -> None:
 
 
 def main():
-    local_path = "/home/fiend/Downloads/Work/DCRT/INPUT/TEMPLATE 3"
-    secondary_path = "/home/fiend/Downloads/Work/DCRT/INPUT/TEMPLATE 4"
-    years = ['2022', '2023']
-    months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
-
     print(f"Creating folders")
     create_dirs(mons=months, yr=years, p_path=local_path, s_path=secondary_path)
     print("Process has finished!")
